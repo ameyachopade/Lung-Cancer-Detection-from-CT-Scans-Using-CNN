@@ -8,9 +8,7 @@ from torchvision.models import ResNet18_Weights
 device = torch.device("cpu")
 num_classes = 2
 
-file_path = 'Classes/Classes.txt'
-with open(file_path, 'r') as f:
-    classes = [line.strip() for line in f]
+classes = ["Postive", "Negative"]
 
 model = models.resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
 model.fc = nn.Linear(model.fc.in_features, num_classes)
