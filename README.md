@@ -40,7 +40,7 @@ The use of dual NVIDIA Tesla T4 GPUs enabled efficient training and experimentat
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN.git
+   git clone https://github.com/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN.git
    cd Lung-Cancer-Detection-from-CT-Scans-Using-CNN
    ```
 
