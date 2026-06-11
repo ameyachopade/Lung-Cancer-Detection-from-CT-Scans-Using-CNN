@@ -11,7 +11,7 @@ An interactive deep learning application for classifying lung CT scans to detect
 ## ✨ Features
 * **Multi-Model Support:** Users can seamlessly toggle between **ResNet-18** and **ResNet-34** models to compare predictions.
 * **Real-time Inference:** Fast and efficient image processing and classification using PyTorch.
-* **Interactive UI:** Built using Gradio, allowing for easy image uploads and displaying clear confidence scores for "Positive" (Cancerous) and "Negative" (Normal) classifications.
+* **Interactive UI:** Built using Gradio, enabling users to upload chest CT scan images and receive real-time predictions with confidence scores for **Positive** (Benign or Malignant) and **Negative** (Normal) classifications.
 * **Pre-loaded Examples:** Includes sample CT scans for immediate testing without needing to download external images.
 
 ## 🛠️ Installation & Setup
