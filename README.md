@@ -4,8 +4,9 @@ An interactive deep learning application for classifying lung CT scans to detect
 
 ## 🚀 Live Demo & Models
 
-* **Hugging Face Space (Live Demo):** [View and interact with the app here](#) *(Add your Hugging Face link here)*
-* **Kaggle Model / Dataset:** [Access the trained models and data here](#) *(Add your Kaggle link here)*
+* **Hugging Face Space (Live Demo):** [View and interact with the app here](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
+* **Kaggle Model:** [Access the trained models here](https://www.kaggle.com/models/ameyachopade/cnn-based-lung-cancer-detection-from-ct-scans/)
+* **Kaggle Dataset:** [Access the dataset here](https://www.kaggle.com/datasets/ameyachopade/ct-scan-binary-classification-dataset/data)
 
 ## ✨ Features
 * **Multi-Model Support:** Users can seamlessly toggle between **ResNet-18** and **ResNet-34** models to compare predictions.
@@ -41,6 +42,31 @@ An interactive deep learning application for classifying lung CT scans to detect
   * `resnet34_ct_v1.safetensors`
 * `examples/`: Sample CT scan images used for the Gradio examples.
 
+## 🔍 Data Source
+
+This dataset is a derived version of the IQ-OTH/NCCD Lung Cancer Dataset.
+
+Original Dataset:
+[The IQ-OTH/NCCD lung cancer dataset](https://www.kaggle.com/datasets/hamdallak/the-iqothnccd-lung-cancer-dataset)
+
+The original dataset contains three classes:
+
+- Normal
+- Benign
+- Malignant
+
+For binary classification purposes, the dataset was restructured by merging the Benign and Malignant classes into a single **Positive** class, while the Normal class was retained as **Negative**.
+
+This derived dataset was created to simplify lung cancer detection as a binary classification problem and to support deep learning, computer vision, and medical imaging research.
+
+All credit for the original CT scan images belongs to the creators of the IQ-OTH/NCCD Lung Cancer Dataset.
+
+---
+
 ## 📄 License
 
-This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for more details.
+This derived dataset is distributed under the **Apache License 2.0**.
+
+Original CT scan images were sourced from the IQ-OTH/NCCD Lung Cancer Dataset. Users should also review and comply with the terms, licensing information, and attribution requirements associated with the original dataset.
+
+By using this dataset, you agree to comply with both the Apache 2.0 License for this derived work and any applicable terms of the original source dataset.

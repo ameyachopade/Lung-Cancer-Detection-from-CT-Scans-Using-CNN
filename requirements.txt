@@ -1,3 +1,5 @@
+# --extra-index-url https://download.pytorch.org/whl/cpu # For cpu only 
+
 torch>=2.0.0
 torchvision>=0.15.0
 gradio>=4.0.0
