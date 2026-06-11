@@ -36,8 +36,8 @@ An interactive deep learning application for classifying lung CT scans to detect
 ## 📁 Repository Structure
 
 * `app.ipynb`: The main Gradio application notebook containing the UI and inference logic.
-* `train.ipynb`: The notebook used for data preprocessing, training, and evaluating the ResNet models.
 * `Model/`: Contains the trained weights for the models (tracked via Git LFS).
+  * `resnet18_ct_v1.pth`
   * `resnet18_ct_v1.1.safetensors`
   * `resnet34_ct_v1.safetensors`
 * `examples/`: Sample CT scan images used for the Gradio examples.
