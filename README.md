@@ -14,6 +14,28 @@ An interactive deep learning application for classifying lung CT scans to detect
 * **Interactive UI:** Built using Gradio, enabling users to upload chest CT scan images and receive real-time predictions with confidence scores for **Positive** (Benign or Malignant) and **Negative** (Normal) classifications.
 * **Pre-loaded Examples:** Includes sample CT scans for immediate testing without needing to download external images.
 
+## ⚙️ Training Environment
+
+The models were trained and evaluated using cloud computing infrastructure.
+
+### Hardware
+- NVIDIA Tesla T4 ×2 GPUs
+- 30 GB Total GPU Memory
+
+### Software
+- Python
+- PyTorch
+- TorchVision
+- CUDA
+
+### Training Configuration
+- Transfer Learning with ImageNet-pretrained weights
+- Binary Classification (Positive vs Negative)
+- CT Scan Image Input
+- GPU-Accelerated Training
+
+The use of dual NVIDIA Tesla T4 GPUs enabled efficient training and experimentation with ResNet-based architectures for lung cancer classification from CT scan images.
+
 ## 🛠️ Installation & Setup
 
 1. **Clone the repository:**
