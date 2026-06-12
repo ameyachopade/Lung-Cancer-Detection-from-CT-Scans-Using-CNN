@@ -1,72 +1,186 @@
+<div align="center">
+
 # 🫁 Lung Cancer Detection from CT Scans Using CNN
 
-An interactive deep learning application for classifying lung CT scans to detect the presence of cancer. This project utilizes fine-tuned **ResNet-18** and **ResNet-34** Convolutional Neural Network (CNN) models to provide real-time predictions with an intuitive Gradio web interface.
+**An interactive deep learning application for binary classification of lung CT scans**
 
-## 🚀 Live Demo & Models
+[![Live Demo](https://img.shields.io/badge/🤗_Hugging_Face-Live_Demo-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
+[![Kaggle Model](https://img.shields.io/badge/Kaggle-Trained_Models-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/models/ameyachopade/cnn-based-lung-cancer-detection-from-ct-scans/)
+[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/ameyachopade/ct-scan-binary-classification-dataset/data)
+[![License](https://img.shields.io/badge/License-Apache_2.0-009688?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
 
-* **Hugging Face Space (Live Demo):** [View and interact with the app here](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
-* **Kaggle Model:** [Access the trained models here](https://www.kaggle.com/models/ameyachopade/cnn-based-lung-cancer-detection-from-ct-scans/)
-* **Kaggle Dataset:** [Access the dataset here](https://www.kaggle.com/datasets/ameyachopade/ct-scan-binary-classification-dataset/data)
+<br>
+
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Gradio](https://img.shields.io/badge/Gradio-4.0+-F97316?style=flat-square&logo=gradio&logoColor=white)](https://gradio.app/)
+[![ResNet](https://img.shields.io/badge/Models-ResNet_18_%7C_34-00599C?style=flat-square&logo=pytorch&logoColor=white)](#-models)
+
+*Fine-tuned **ResNet-18** and **ResNet-34** CNNs · Real-time inference · Gradio web UI*
+
+[🚀 Quick Start](#-quick-start) · [✨ Features](#-features) · [📁 Project Structure](#-project-structure) · [🔍 Dataset](#-dataset) · [📄 License](#-license)
+
+</div>
+
+---
+
+## 📖 Overview
+
+This project applies transfer learning with **ResNet** architectures to classify lung CT scan images as **Positive** (cancerous) or **Negative** (normal). A lightweight **Gradio** interface lets you upload scans, switch between models, and view confidence scores instantly — locally or on [Hugging Face Spaces](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN).
+
+> ⚠️ **Disclaimer:** This tool is intended for **research and educational purposes only**. It is **not** a medical device and must **not** be used for clinical diagnosis or treatment decisions.
+
+---
+
+## 🔄 How It Works
+
+```mermaid
+flowchart TD
+    A[CT Scan Upload] --> B[Preprocess 224x224]
+    B --> C[ImageNet Normalize]
+    C --> D{Model Selection}
+    D -->|ResNet-18| E[ResNet-18 Inference]
+    D -->|ResNet-34| F[ResNet-34 Inference]
+    E --> G[Prediction and Confidence Scores]
+    F --> G
+```
+
+| Stage | Details |
+|:------|:--------|
+| **Input** | Lung CT scan image (JPG/PNG) |
+| **Preprocessing** | Resize to 224×224, ImageNet normalization |
+| **Models** | ResNet-18 & ResNet-34 (ImageNet pre-trained, fine-tuned) |
+| **Output** | Class label + confidence scores for both classes |
+| **Weights** | Stored as `.safetensors` in `Model/` |
+
+---
 
 ## ✨ Features
-* **Multi-Model Support:** Users can seamlessly toggle between **ResNet-18** and **ResNet-34** models to compare predictions.
-* **Real-time Inference:** Fast and efficient image processing and classification using PyTorch.
-* **Interactive UI:** Built using Gradio, allowing for easy image uploads and displaying clear confidence scores for "Positive" (Cancerous) and "Negative" (Normal) classifications.
-* **Pre-loaded Examples:** Includes sample CT scans for immediate testing without needing to download external images.
 
-## 🛠️ Installation & Setup
+| | Feature | Description |
+|:---:|:---|:---|
+| 🔀 | **Multi-Model Support** | Toggle between **ResNet-18** and **ResNet-34** to compare predictions side by side |
+| ⚡ | **Real-Time Inference** | Fast CPU/GPU classification powered by **PyTorch** |
+| 🖥️ | **Interactive UI** | Drag-and-drop uploads, model selector, and clear confidence bars via **Gradio** |
+| 📂 | **Pre-loaded Examples** | 10 sample CT scans in `examples/` for instant testing — no downloads required |
+| 🔒 | **Safe Weights** | Model checkpoints loaded with **Safetensors** for secure, efficient deserialization |
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN.git
-   cd Lung-Cancer-Detection-from-CT-Scans-Using-CNN
-   ```
+---
 
-2. **Install the required dependencies:**
-   Make sure you have Python installed. Then run:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🚀 Quick Start
 
-3. **Run the application:**
-   You can run the application directly from the Jupyter Notebook:
-   * Open `app.ipynb` in Jupyter Notebook or VS Code and run the cells.
-   * The Gradio interface will launch on a local web server (usually `http://127.0.0.1:7860`).
+### Prerequisites
 
-## 📁 Repository Structure
+- Python **3.8+**
+- [Git LFS](https://git-lfs.com/) *(required to pull model weights in `Model/`)*
 
-* `app.ipynb`: The main Gradio application notebook containing the UI and inference logic.
-* `train.ipynb`: The notebook used for data preprocessing, training, and evaluating the ResNet models.
-* `Model/`: Contains the trained weights for the models (tracked via Git LFS).
-  * `resnet18_ct_v1.1.safetensors`
-  * `resnet34_ct_v1.safetensors`
-* `examples/`: Sample CT scan images used for the Gradio examples.
+### 1️⃣ Clone the repository
 
-## 🔍 Data Source
+```bash
+git clone https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN.git
+cd Lung-Cancer-Detection-from-CT-Scans-Using-CNN
+git lfs pull
+```
 
-This dataset is a derived version of the IQ-OTH/NCCD Lung Cancer Dataset.
+### 2️⃣ Install dependencies
 
-Original Dataset:
-[The IQ-OTH/NCCD lung cancer dataset](https://www.kaggle.com/datasets/hamdallak/the-iqothnccd-lung-cancer-dataset)
+```bash
+pip install -r requirements.txt
+```
 
-The original dataset contains three classes:
+> 💡 **CPU-only PyTorch:** Uncomment the `--extra-index-url` line at the top of `requirements.txt` if you need the CPU-only wheel.
 
-- Normal
-- Benign
-- Malignant
+### 3️⃣ Launch the app
 
-For binary classification purposes, the dataset was restructured by merging the Benign and Malignant classes into a single **Positive** class, while the Normal class was retained as **Negative**.
+**Option A — Python script** *(recommended)*
 
-This derived dataset was created to simplify lung cancer detection as a binary classification problem and to support deep learning, computer vision, and medical imaging research.
+```bash
+python app.py
+```
 
-All credit for the original CT scan images belongs to the creators of the IQ-OTH/NCCD Lung Cancer Dataset.
+**Option B — Jupyter Notebook**
+
+Open `app.ipynb` in Jupyter or VS Code, run all cells, and the Gradio server will start automatically.
+
+🌐 Open your browser at **`http://127.0.0.1:7860`**
+
+---
+
+## 🧠 Models
+
+| Model | Weights File | Architecture |
+|:------|:-------------|:-------------|
+| **ResNet-18** | `Model/resnet18_ct_v1.1.safetensors` | 18-layer residual network |
+| **ResNet-34** | `Model/resnet34_ct_v1.safetensors` | 34-layer residual network *(default)* |
+
+Both models use ImageNet pre-trained backbones with a replaced fully-connected layer for **2-class** binary classification.
+
+📦 **Download separately:** [Kaggle Models](https://www.kaggle.com/models/ameyachopade/cnn-based-lung-cancer-detection-from-ct-scans/)
+
+---
+
+## 📁 Project Structure
+
+```
+Lung-Cancer-Detection-from-CT-Scans-Using-CNN/
+│
+├── 📓 app.ipynb              # Gradio app (notebook version)
+├── 🐍 app.py                 # Gradio app (script version)
+├── 📋 requirements.txt       # Python dependencies
+├── 📄 LICENSE                # Apache License 2.0
+│
+├── 🧠 Model/                 # Trained weights (Git LFS)
+│   ├── resnet18_ct_v1.1.safetensors
+│   └── resnet34_ct_v1.safetensors
+│
+└── 🖼️ examples/              # Sample CT scans for the demo UI
+    ├── 1.jpg … 10.jpg
+```
+
+---
+
+## 🔍 Dataset
+
+This project uses a **derived binary-classification dataset** built from the [IQ-OTH/NCCD Lung Cancer Dataset](https://www.kaggle.com/datasets/hamdallak/the-iqothnccd-lung-cancer-dataset).
+
+| Original Class | Mapped To | Meaning |
+|:---------------|:----------|:--------|
+| Normal | **Negative** | No cancer detected |
+| Benign + Malignant | **Positive** | Cancer indicators present |
+
+The three-class source dataset was restructured into a **Positive / Negative** binary task to simplify lung cancer detection for deep learning and medical imaging research.
+
+📦 **Access the derived dataset:** [Kaggle — CT Scan Binary Classification](https://www.kaggle.com/datasets/ameyachopade/ct-scan-binary-classification-dataset/data)
+
+> All credit for the original CT scan images belongs to the creators of the **IQ-OTH/NCCD Lung Cancer Dataset**.
+
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/TorchVision-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="TorchVision"/>
+  <img src="https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logo=gradio&logoColor=white" alt="Gradio"/>
+  <img src="https://img.shields.io/badge/Safetensors-000000?style=for-the-badge&logo=huggingface&logoColor=white" alt="Safetensors"/>
+  <img src="https://img.shields.io/badge/Pillow-FFE873?style=for-the-badge&logo=python&logoColor=black" alt="Pillow"/>
+</p>
 
 ---
 
 ## 📄 License
 
-This derived dataset is distributed under the **Apache License 2.0**.
+This derived dataset and project code are distributed under the **[Apache License 2.0](LICENSE)**.
 
-Original CT scan images were sourced from the IQ-OTH/NCCD Lung Cancer Dataset. Users should also review and comply with the terms, licensing information, and attribution requirements associated with the original dataset.
+Original CT scan images were sourced from the **IQ-OTH/NCCD Lung Cancer Dataset**. Users must review and comply with the terms, licensing, and attribution requirements of the original dataset in addition to Apache 2.0.
 
-By using this dataset, you agree to comply with both the Apache 2.0 License for this derived work and any applicable terms of the original source dataset.
+---
+
+<div align="center">
+
+**Built with ❤️ for medical imaging research**
+
+[⭐ Star this repo](https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN) · [🐛 Report an issue](https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN/issues) · [🤗 Try the demo](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
+
+</div>
