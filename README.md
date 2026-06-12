@@ -5,8 +5,8 @@
 **An interactive deep learning application for binary classification of lung CT scans**
 
 [![Live Demo](https://img.shields.io/badge/🤗_Hugging_Face-Live_Demo-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
-[![Kaggle Model](https://img.shields.io/badge/Kaggle-Trained_Models-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/models/ameyachopade/cnn-based-lung-cancer-detection-from-ct-scans/)
-[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/ameyachopade/ct-scan-binary-classification-dataset/data)
+[![Kaggle Model](https://img.shields.io/badge/Kaggle-Trained_Models-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/models/ameyac11/cnn-based-lung-cancer-detection-from-ct-scans/)
+[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/ameyac11/ct-scan-binary-classification-dataset/data)
 [![License](https://img.shields.io/badge/License-Apache_2.0-009688?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
 
 <br>
@@ -139,7 +139,7 @@ Open `app.ipynb` in Jupyter or VS Code, run all cells, and the Gradio server wil
 
 Both models use ImageNet pre-trained backbones with a replaced fully-connected layer for **2-class** binary classification.
 
-📦 **Download separately:** [Kaggle Models](https://www.kaggle.com/models/ameyachopade/cnn-based-lung-cancer-detection-from-ct-scans/)
+📦 **Download separately:** [Kaggle Models](https://www.kaggle.com/models/ameyac11/cnn-based-lung-cancer-detection-from-ct-scans/)
 
 ---
 
@@ -174,7 +174,7 @@ This project uses a **derived binary-classification dataset** built from the [IQ
 
 The three-class source dataset was restructured into a **Positive / Negative** binary task to simplify lung cancer detection for deep learning and medical imaging research.
 
-📦 **Access the derived dataset:** [Kaggle — CT Scan Binary Classification](https://www.kaggle.com/datasets/ameyachopade/ct-scan-binary-classification-dataset/data)
+📦 **Access the derived dataset:** [Kaggle — CT Scan Binary Classification](https://www.kaggle.com/datasets/ameyac11/ct-scan-binary-classification-dataset/data)
 
 > All credit for the original CT scan images belongs to the creators of the **IQ-OTH/NCCD Lung Cancer Dataset**.
 
