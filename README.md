@@ -61,9 +61,33 @@ flowchart TD
 |:---:|:---|:---|
 | 🔀 | **Multi-Model Support** | Toggle between **ResNet-18** and **ResNet-34** to compare predictions side by side |
 | ⚡ | **Real-Time Inference** | Fast CPU/GPU classification powered by **PyTorch** |
-| 🖥️ | **Interactive UI** | Drag-and-drop uploads, model selector, and clear confidence bars via **Gradio** |
+| 🖥️ | **Interactive UI** | Drag-and-drop uploads, model selector, and clear confidence bars via **Gradio** — predictions for **Positive** (Benign or Malignant) and **Negative** (Normal) |
 | 📂 | **Pre-loaded Examples** | 10 sample CT scans in `examples/` for instant testing — no downloads required |
 | 🔒 | **Safe Weights** | Model checkpoints loaded with **Safetensors** for secure, efficient deserialization |
+
+---
+
+## ⚙️ Training Environment
+
+The models were trained and evaluated using cloud computing infrastructure.
+
+### Hardware
+- NVIDIA Tesla T4 ×2 GPUs
+- 30 GB Total GPU Memory
+
+### Software
+- Python
+- PyTorch
+- TorchVision
+- CUDA
+
+### Training Configuration
+- Transfer Learning with ImageNet-pretrained weights
+- Binary Classification (Positive vs Negative)
+- CT Scan Image Input
+- GPU-Accelerated Training
+
+The use of dual NVIDIA Tesla T4 GPUs enabled efficient training and experimentation with ResNet-based architectures for lung cancer classification from CT scan images.
 
 ---
 
