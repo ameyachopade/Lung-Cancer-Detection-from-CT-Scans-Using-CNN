@@ -101,7 +101,7 @@ The use of dual NVIDIA Tesla T4 GPUs enabled efficient training and experimentat
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN.git
+git clone https://github.com/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN.git
 cd Lung-Cancer-Detection-from-CT-Scans-Using-CNN
 git lfs pull
 ```
@@ -193,6 +193,12 @@ The three-class source dataset was restructured into a **Positive / Negative** b
 
 ---
 
+## 🌟 Support
+
+If you find this project useful or interesting, please consider giving it a ⭐ on GitHub! Your support helps make the project more visible and encourages further development.
+
+---
+
 ## 📄 License
 
 This derived dataset and project code are distributed under the **[Apache License 2.0](LICENSE)**.
@@ -205,6 +211,6 @@ Original CT scan images were sourced from the **IQ-OTH/NCCD Lung Cancer Dataset*
 
 **Built with ❤️ for medical imaging research**
 
-[⭐ Star this repo](https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN) · [🐛 Report an issue](https://github.com/AmeyC171/Lung-Cancer-Detection-from-CT-Scans-Using-CNN/issues) · [🤗 Try the demo](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
+[⭐ Star this repo](https://github.com/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN) · [🐛 Report an issue](https://github.com/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN/issues) · [🤗 Try the demo](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
 
 </div>
