@@ -4,17 +4,17 @@
 
 **An interactive deep learning application for binary classification of lung CT scans**
 
-[![Live Demo](https://img.shields.io/badge/🤗_Hugging_Face-Live_Demo-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
-[![Kaggle Model](https://img.shields.io/badge/Kaggle-Trained_Models-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/models/ameyac11/cnn-based-lung-cancer-detection-from-ct-scans/)
-[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/ameyac11/ct-scan-binary-classification-dataset/data)
-[![License](https://img.shields.io/badge/License-Apache_2.0-009688?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
+[![Live Demo](https://api.gitlytics.dev/api/badge/tech.svg?slug=huggingface&style=icon_label_value&label=Hugging%20Face&label_color=%23555555&variant=plastic&value=Live%20Demo&value_color=%23FFD21E)](https://huggingface.co/spaces/ameyac11/Lung-Cancer-Detection-from-CT-Scans-Using-CNN)
+[![Kaggle Model](https://api.gitlytics.dev/api/badge/tech.svg?slug=kaggle&style=icon_label_value&label=Kaggle&label_color=%23555555&variant=plastic&value=Models&value_color=%2320BEFF)](https://www.kaggle.com/models/ameyac11/cnn-based-lung-cancer-detection-from-ct-scans/)
+[![Kaggle Dataset](https://api.gitlytics.dev/api/badge/tech.svg?slug=kaggle&style=icon_label_value&label=Kaggle&label_color=%23555555&variant=plastic&value=Dataset&value_color=%2320BEFF)](https://www.kaggle.com/datasets/ameyac11/ct-scan-binary-classification-dataset/data)
+[![License](https://api.gitlytics.dev/api/badge/tech.svg?slug=license&style=icon_label_value&label=License&label_color=%23555555&variant=plastic&value=Apache%202.0&value_color=%23009688)](LICENSE)
 
 <br>
 
-[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Gradio](https://img.shields.io/badge/Gradio-4.0+-F97316?style=flat-square&logo=gradio&logoColor=white)](https://gradio.app/)
-[![ResNet](https://img.shields.io/badge/Models-ResNet_18_%7C_34-00599C?style=flat-square&logo=pytorch&logoColor=white)](#-models)
+[![Python](https://api.gitlytics.dev/api/badge/tech.svg?slug=python&style=icon_label_value&label=Language&label_color=%23555555&variant=plastic&value=Python%203.8%2B&value_color=%233776AB)](https://www.python.org/)
+[![PyTorch](https://api.gitlytics.dev/api/badge/tech.svg?slug=pytorch&style=icon_label_value&label=AI%2FML&label_color=%23555555&variant=plastic&value=PyTorch&value_color=%23EE4C2C)](https://pytorch.org/)
+[![Gradio](https://api.gitlytics.dev/api/badge/tech.svg?slug=gradio&style=icon_label_value&label=UI&label_color=%23555555&variant=plastic&value=Gradio&value_color=%23F97316)](https://gradio.app/)
+[![ResNet](https://api.gitlytics.dev/api/badge/tech.svg?slug=pytorch&style=icon_label_value&label=Models&label_color=%23555555&variant=plastic&value=ResNet-18%2F34&value_color=%2300599C)](#-models)
 
 *Fine-tuned **ResNet-18** and **ResNet-34** CNNs · Real-time inference · Gradio web UI*
 
@@ -183,12 +183,12 @@ The three-class source dataset was restructured into a **Positive / Negative** b
 ## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
-  <img src="https://img.shields.io/badge/TorchVision-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="TorchVision"/>
-  <img src="https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logo=gradio&logoColor=white" alt="Gradio"/>
-  <img src="https://img.shields.io/badge/Safetensors-000000?style=for-the-badge&logo=huggingface&logoColor=white" alt="Safetensors"/>
-  <img src="https://img.shields.io/badge/Pillow-FFE873?style=for-the-badge&logo=python&logoColor=black" alt="Pillow"/>
+  <img src="https://api.gitlytics.dev/api/badge/tech.svg?slug=python&style=icon_label_value&label=Language&label_color=%23555555&variant=plastic&value=Python&value_color=%233776AB" alt="Python"/>
+  <img src="https://api.gitlytics.dev/api/badge/tech.svg?slug=pytorch&style=icon_label_value&label=AI%2FML&label_color=%23555555&variant=plastic&value=PyTorch&value_color=%23EE4C2C" alt="PyTorch"/>
+  <img src="https://api.gitlytics.dev/api/badge/tech.svg?slug=pytorch&style=icon_label_value&label=Vision&label_color=%23555555&variant=plastic&value=TorchVision&value_color=%23EE4C2C" alt="TorchVision"/>
+  <img src="https://api.gitlytics.dev/api/badge/tech.svg?slug=gradio&style=icon_label_value&label=UI&label_color=%23555555&variant=plastic&value=Gradio&value_color=%23F97316" alt="Gradio"/>
+  <img src="https://api.gitlytics.dev/api/badge/tech.svg?slug=huggingface&style=icon_label_value&label=Format&label_color=%23555555&variant=plastic&value=Safetensors&value_color=%23000000" alt="Safetensors"/>
+  <img src="https://api.gitlytics.dev/api/badge/tech.svg?slug=python&style=icon_label_value&label=Images&label_color=%23555555&variant=plastic&value=Pillow&value_color=%23FFE873" alt="Pillow"/>
 </p>
 
 ---
