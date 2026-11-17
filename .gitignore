@@ -14,3 +14,6 @@ env/
 # OS Files
 .DS_Store
 Thumbs.db
+# Generated code intelligence indexes
+.codegraph/
+graphify-out/
